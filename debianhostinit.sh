@@ -10,7 +10,7 @@ sudo apt autoremove -y &&\
 sudo apt install wget ssh -y &&\
 
 # Permit root to log in from SSH and restart SSH
-echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&\
+sudo echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&\
 sudo systemctl restart ssh &&\
 
 # Create a password for the root user
