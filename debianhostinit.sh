@@ -16,4 +16,4 @@ sudo systemctl restart ssh &&\
 
 # Create a password for the root user
 # Change this password if desired but it will only be set for the live system for the build
-(echo 'password'; echo 'password') | passwd root
+(echo 'password'; echo 'password') | sudo passwd root
