@@ -6,11 +6,12 @@ sudo apt update -y && \
 sudo apt upgrade -y && \
 sudo apt autoremove -y &&\
 
-#Install ssh for Ansible
+# Install ssh for Ansible
 sudo apt install wget ssh -y &&\
 
 # Permit root to log in from SSH and restart SSH
-sudo echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&\
+#sudo echo "PermitRootLogin yes" >> /etc/ssh/sshd_config &&\
+echo "PermitRootLogin yes" | sudo tee -a /etc/ssh/sshd_config &&\
 sudo systemctl restart ssh &&\
 
 # Create a password for the root user
